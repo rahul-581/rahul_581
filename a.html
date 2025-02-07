@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration</title>
+</head>
+<body>
+
+    <h2>Event Registration</h2>
+    <form id="regForm">
+        <input type="text" id="name" placeholder="Full Name" required><br>
+        <input type="email" id="email" placeholder="Email" required><br>
+        <input type="tel" id="phone" placeholder="Phone Number" required><br>
+        <select id="event" required>
+            <option value="workshop">Workshop</option>
+            <option value="seminar">Seminar</option>
+            <option value="conference">Conference</option>
+        </select><br>
+        <button type="submit">Register</button>
+    </form>
+
+    <script>
+        document.getElementById("regForm").addEventListener("submit", function(e) {
+            e.preventDefault();  // Prevent form submission
+            alert("Registration successful!");
+        });
+    </script>
+
+</body>
+</html>
+
